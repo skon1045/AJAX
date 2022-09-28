@@ -28,13 +28,15 @@
                 console.log(result);        // 印出 result 的陣列             
                 list.innerHTML="";
                 let product;
-
+                let sum=0;
                 for(let i=0;i<result.length;i++){
                     product=result[i];      // 個別將陣列內容分次存取到 product 物件
                     console.log(product);   // 印出 product 的內容
                     list.innerHTML+=product.name.bold()+" - "+product.price+"<hr/>";
+                    sum+=product.price;
                 }
-
+                let avg=sum/result.length;
+                list.innerHTML+="商品售價平均為:"+avg;
             });
         </script>
     </body>
