@@ -9,6 +9,12 @@
         <h3>AJAX 網路連線的基本操作</h3>
         <div id="list"></div>
         <script>
+
+            let data='{"name":"彭彭"}';     // 字串資料
+            console.log("轉換前", data);
+            data=JSON.parse(data);          // 轉換為陣列物件
+            console.log("轉換後", data);
+
             // 先顯示 Loading 訊息
             let list=document.getElementById("list");
             list.innerHTML="...Loading...";
